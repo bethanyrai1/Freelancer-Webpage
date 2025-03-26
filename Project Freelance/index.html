@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Freelance Webpage</title>
+    <meta name="description" content="A website showing a freelancer's portfolio."> 
+    <link rel="stylesheet" href="styles.css"> 
+
+    <!-- Code for importing google font -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+</head>
+
+<body>
+<nav>
+    <img src="images/logo.png" alt="The company logo, the logo appears as a black warped circle." class="logo"> 
+    <ul id="menu-links">
+        <li>Home</li>
+        <li>Services</li>
+        <li>Projects</li>
+        <li>About Us</li>
+    </ul>
+    <button class="nav-btn">Get started!<img src="images/arrow-white.png" alt="A white arrow pointing to the right."></button>
+
+    <img src="images/menu.png" alt="" class="menu-icon" onclick="toggleMenu()">
+</nav>
+
+<div class="header"> 
+    <div class="header-content">
+        <h1><span>FREE</span><br><span>LANCER</span></h1>
+        <div class="btn-container"> 
+            <button class="btn-dark">Request call back <img src="images/phone.png" alt="Icon of a phone."></button>
+            <button class="btn-light">Know more <img src="images/arrow-black.png" alt="Icon of a black arrow."></button>
+        </div>
+        <p>Passionate UI/UX designers with 10+ years of experience!</p>
+    </div>
+
+        <img src="images/user.png" alt="A picture showing the author of this website, Jennifer, looking at the screen one hand with a thumps-up and the other holding a coffee." class="user-img">
+
+</div>
+
+
+<!-- EVERYTHING THAT USES JAVASCRIPT IS WRITTEN BELOW HERE -->
+<script> 
+
+    /* Defining the objects */ 
+    let navbar = document.querySelector("nav"); 
+    let menuLinks = document.getElementById("menu-links"); 
+
+
+    function toggleMenu(){ /* Enables the mini nav menu to show when the img icon is clicked */ 
+        menuLinks.classList.toggle('show-menu'); 
+    }
+ 
+    window.onscroll = function(){   // Stops all elements on the site from clipping through the navbar 
+        if(window.scrollY > 0){ 
+            navbar.style.background = '#eefff9'; // When scrolling down, the navbar will stay atop 
+        } 
+        else{
+            navbar.style.background = 'transparent'; 
+        }
+    }
+
+</script>
+</body>
+</html>
